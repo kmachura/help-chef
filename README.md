@@ -28,12 +28,12 @@
 
 | Tech                                                    | Description                              |
 | ------------------------------------------------------- | ---------------------------------------- |
-| [X]Java                                                 | XYZ   |
-| [X]Spring Boot                                          | XYZ   |
-| [X]Angular                                              | XYZ   |
-| [X]H2                                                   | XYZ   |
-| [X]Docker                                               | XYZ   |
-| [X]Java Script                                          | XYZ   |
+| Java                                                 | an object-oriented programming language used to build primary structure of the help chef app    |
+| Spring Boot                                          | a java-based framework used for creating spring-based applications in Java in short time bereft of being tied to a specific platform, which enables chef help to run locally on any devices even without an internet access.   |
+| Angular                                              | an open- source front-end JavaScript framework for developing web applications using HTML, CSS and TypeScript  |
+| H2                                                   | a lightweight Java SQL database, which can run entirely in-memory or with disk-storage |
+| Docker                                               | an open source platform for quickly creating, deploying, managing and testing Help Chef on any platform   |
+| Java Script                                          | a scripting language used to create dynamic web pages for help chef application  |
 
 
 ## Screenshots 📺
