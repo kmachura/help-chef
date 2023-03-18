@@ -56,6 +56,7 @@
 ## Installation 💾
 
 ## UML Diagrams 📈
+![Use case diagram ZJO](https://user-images.githubusercontent.com/55921722/226111280-cf9f8f2e-c37b-423d-ae8a-6f97abec5c97.jpg)
 
 ## Available scripts 💡
 
