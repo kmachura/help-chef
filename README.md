@@ -1,2 +1,2 @@
 # help-chef
-Help Chef - Project in Java, Spring Boot, Angular, H2, Docker tworzący bazę danych przepisów kulinarnych 
+Help Chef - Project in Java, Spring Boot, Angular, H2, Docker creating a database of cooking recipes. The system helps in the functioning of the web application related to online cooking in the demo version, placed on the server, accessible via a web browser. The basic function of the system is to enable a new potential user to create their own account and access it without leaving home and use the account to search for recipes by products, other users, production time and product purchase costs.
