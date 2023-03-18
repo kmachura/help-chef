@@ -57,13 +57,7 @@
 ## Installation 💾
 
 ## UML Diagrams 📈
-<p align="center">
-<h4> A use case diagram </h4>
-</p>
-<h6> A use case diagram is a UML diagram that shows us in the form of scenarios how how a system or software interacts with individuals, organizations, or
-external systems carried for the purposes of this diagram the name of actors. he transmits
-how the actor uses the system to achieve a specific goal. He doesn't implementation details and attributes, user values. No actor creating a use case diagram would be impossible as the main goal is showing how to use the system. Thus, it allows you to designate programmer, the goals that a given software user will want to achieve. These diagrams are used to supplement more detailed documentation.
-</h6>
+
 ![Use case diagram ZJO](https://user-images.githubusercontent.com/55921722/226111280-cf9f8f2e-c37b-423d-ae8a-6f97abec5c97.jpg)
 
 ## Available scripts 💡
