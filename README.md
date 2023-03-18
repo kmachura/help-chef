@@ -3,7 +3,7 @@
 <br>
 
 <p align="center">
-![image](https://user-images.githubusercontent.com/116964317/226112362-60bb54d2-019d-4984-800a-8bf469401def.png)
+<img src=""  alt="Logo">
 
 </p>
 
