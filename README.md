@@ -19,7 +19,7 @@
 <p align="center">
   <a >
     <img src=""
-         alt="Screenshot">
+         alt="Screenshot of the main page">
   </a>
 </p>
 
