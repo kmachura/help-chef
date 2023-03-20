@@ -95,4 +95,4 @@ Connection with server follows with REST API architecture style. Web application
 <h6> Not yet </h6>
 
 ## License ⚖️
-<h6> None </h6>
+<h6> Logo design from www.vecteezy.com </h6>
