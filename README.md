@@ -14,7 +14,7 @@
 
 </h1>
 
-<h4 align="center">Help-chef</h4>
+<h2 align="center">Help-chef</h2>
 
 <p align="center">
   <a >
