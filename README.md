@@ -3,7 +3,8 @@
 <br>
 
 <p align="center">
-<img src=""  alt="Logo">
+
+![image](https://user-images.githubusercontent.com/116964317/226111823-d9377a42-3429-4863-9fc8-4821a00486f2.png)
 
 </p>
 
@@ -57,10 +58,28 @@
 ## Installation 💾
 
 ## UML Diagrams 📈
+<h4> Use case diagram </h4>
+<h6> A use case diagram is a UML diagram that shows us in the form of scenarios how a system or software interacts with individuals, organizations, or external systems carried for the purposes of this diagram the name of actors. It transmits how the actor uses the system to achieve a specific goal. It doesn't implement details, attributes, and user values. Without an actor, creating a use case diagram would be impossible as the main goal is to show how to use the system. Thus, it allows you to designate programmer, the goals that a given software user will want to achieve. These diagrams are used to supplement more detailed documentation. In this case, it shows how a potential user or a person with an already-created account can look for, add, delete, update, or review recipes on Help Chef. </h6>
 
 ![Use case diagram ZJO](https://user-images.githubusercontent.com/55921722/226111280-cf9f8f2e-c37b-423d-ae8a-6f97abec5c97.jpg)
 
+<h4> Class diagram </c4>
+<h6> A class diagram is a UML diagram that is considered by many to be one of the most useful diagrams because they allow us to reproduce the structure very precisely specific system. A class diagram uses information about its class for this purpose,
+attribute, operation, and relations between them, e.g. class: human, attribute: eye color, height or weight, and the operation will be some activity, e.g. driving a car. The shape construction of this diagram is divided into three rows and is in the form of a rectangle. The top row contains information about the class name, the middle one tells us about the class's attributes and the bottom row has pieces of information about the methods or operations that the class can perform. We must also remember that classes also have access modifiers, they are visible only to e.g. network administrator or for all users, depending on which symbol we choose ( Public (+) or Private (-)). In our project, we have e.g. class name as the user, attributes are id, name, surname, e-mail, nick, and the operations are login and sign. </h6>
+
 ![Class Diagram ZJO](https://user-images.githubusercontent.com/55921722/226114808-6be7eff3-ff13-439c-8856-abe592e5bc79.jpg)
+
+<h4> Activity diagram </c4>
+<h6> An activity diagram is a UML diagram that is used to model activities and scope responsibility of system components or users. It is otherwise known as an interaction diagram. Its primary function is to show the sequence of steps. These steps are performed by the modeled part of the system. It shows in the form of elements the behavior of the system, but where, the most important element is the activity. In this way, it shows the behavioral aspects of our system by using activities that the user, administrator, or server performs. The activity diagram was created by using: https://www.visual-paradigm.com. </h6>
+
+![Activity Diagram ZJO](https://user-images.githubusercontent.com/55921722/226203864-cab3cd57-3b53-4848-b6d3-e09411b5e104.jpg)
+
+## System architecture 🗼
+<h4> C4 diagram </h4>
+<h6> C4 level model diagram stands for context, containers, components, and code. It is a diagram that shows a hierarchical set of software architecture and is a great tool to communicate the planning process of a software system. Help-chef project is beeing created using many programming languages and technologies. Backend of the application is beeing implemented in Java. Spring Framework is responsible for business side of the system and enables double sided communication with H2 database.
+Connection with server follows with REST API architecture style. Web application is beeing created using JavaScript Framework - Angular. </h6>
+
+![C4 diagram ZJO](https://user-images.githubusercontent.com/55921722/226203921-8611794f-ddc7-4e31-997f-c2e135bc715d.png)
 
 ## Available scripts 💡
 
