@@ -10,10 +10,24 @@ class UsersTest {
 
     @Test
     public void testEmailHasAt() {
-        Users users = new Users();
-        users.setEmail("test@gmail.com");
+        Users user = new Users();
+        user.setEmail("test@gmail.com");
 
-        assertTrue(users.getEmail().contains("@"));
+        assertTrue(user.getEmail().contains("@"));
+    }
+
+    @Test
+    public void testNameAndSurnameStartsWithCapitalLetter() {
+        Users user = new Users();
+        user.setName("TestName");
+        user.setSurname("TestSurname");
+
+        String userName =  user.getName();
+        String userSurname = user.getSurname();
+
+        boolean result = Character.isUpperCase(userName.charAt(0)) && Character.isUpperCase(userSurname.charAt(0));
+
+        assertTrue(result);
     }
 
 }
