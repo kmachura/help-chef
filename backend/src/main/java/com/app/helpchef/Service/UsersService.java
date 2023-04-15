@@ -24,12 +24,12 @@ public class UsersService {
 
     public Users findUserById(long userId) {
         return usersRepository.findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("User with ud: " + userId + " not exist"));
+                .orElseThrow(() -> new ResourceNotFoundException("User with id: " + userId + " not exist"));
     }
 
     public Users updateUser(long userId, Users userDetails) {
         Users updateUser = usersRepository.findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("User with ud: " + userId + " not exist"));
+                .orElseThrow(() -> new ResourceNotFoundException("User with id: " + userId + " not exist"));
 
         updateUser.setEmail(userDetails.getEmail());
         updateUser.setName(userDetails.getName());
@@ -41,7 +41,7 @@ public class UsersService {
 
     public void deleteUser(long userId) {
         Users user = usersRepository.findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("User with ud: " + userId + " not exist"));
+                .orElseThrow(() -> new ResourceNotFoundException("User with id: " + userId + " not exist"));
 
         usersRepository.delete(user);
     }
