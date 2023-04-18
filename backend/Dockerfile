@@ -11,7 +11,7 @@ FROM openjdk:17-jdk-alpine
 ENV APP_FILE help-chef-0.0.1-SNAPSHOT.jar
 ENV APP_HOME /usr/app
 
-EXPOSE 8080
+EXPOSE 8082
 
 COPY --from=build /app/target/$APP_FILE $APP_HOME/
 
