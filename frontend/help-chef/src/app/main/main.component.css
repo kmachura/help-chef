@@ -23,6 +23,14 @@ html {
   position: relative;
 }
 
+.front-image {
+  width: 100%;
+  height: 100vh;
+  background-color: #393e46;
+  background-size: cover;
+  position: relative;
+}
+
 .front {
   width: 100%;
   position: absolute;
@@ -35,15 +43,68 @@ html {
 .front-heading {
   margin-bottom: 4rem;
   height: 15rem;
+  perspective: 50rem;
+  overflow: hidden;
 }
 
 .front-heading span {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 2rem;
+  font-size: 6rem;
   font-weight: 400;
   text-transform: uppercase;
   color: #00adb5;
   text-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transform: translateZ(8rem);
+  opacity: 0;
+  letter-spacing: 1rem;
+}
+
+.heading-one {
+  animation: headingAnimated 12s 3s infinite;
+}
+
+.heading-two {
+  animation: headingAnimated 12s 6s infinite;
+}
+
+.heading-three {
+  animation: headingAnimated 12s 9s infinite;
+}
+
+.heading-four {
+  animation: headingAnimated 12s 12s infinite;
+}
+
+@keyframes headingAnimated {
+  0% {
+    transform: translateZ(8rem);
+    opacity: 0;
+    letter-spacing: 3rem;
+  }
+  3% {
+    transform: translateZ(0);
+    opacity: 1;
+    letter-spacing: 1.5rem;
+  }
+  25% {
+    transform: translateZ(0);
+    opacity: 1;
+    letter-spacing: 1.5rem;
+  }
+  28% {
+    transform: translateZ(8rem);
+    opacity: 0;
+    letter-spacing: 3rem;
+  }
+  100% {
+    transform: translateZ(8rem);
+    opacity: 0;
+    letter-spacing: 3rem;
+  }
 }
 
 .front-paragraph {
@@ -56,10 +117,13 @@ html {
   margin: 0 auto 2rem auto;
   padding: 1rem 0;
   box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  animation: popAnimation 1s 1.5s forwards;
 }
 
 .front-btn {
-  width: 15rem;
+  width: 18rem;
   height: 6rem;
   background: linear-gradient(to right, #00adb5, #1684a7);
   color: #fff;
@@ -70,5 +134,37 @@ html {
   box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.5);
   text-shadow: 0.3rem 0.2rem 0.1rem rgba(0, 0, 0, 0.4);
   cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  animation: popAnimation 1s 2s forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.front-btn::before{
+  content:"";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #EEEEEE, transparent);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transform: skewX(-30deg);
+  transition: left 0.5s;
+}
+
+.front-btn:hover::before{
+  left: 100%;
+}
+
+@keyframes popAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 /* The End of the First Section */
