@@ -8,6 +8,8 @@ COPY package*.json ./
 
 RUN npm install --save-dev @angular/cli@latest -g
 
+RUN npm install
+
 COPY . .
 
 RUN npm run
