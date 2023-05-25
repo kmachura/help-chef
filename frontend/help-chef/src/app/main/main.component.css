@@ -14,6 +14,106 @@ html {
 }
 /* The End of Basic Styles */
 
+ /* Navbar */
+ .navbar{
+  width:100%;
+  height:8rem;
+  background-color:rgba(0,0,0,0.6);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding: 3rem;
+  transition: height 0.5s;
+ }
+
+ .navbar.change{
+  height: 100vh;
+ }
+
+ .logo{
+  position: absolute;
+  top: 1.5rem;
+  left: 4rem;
+ }
+
+ .logo a{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  color: #eee;
+  letter-spacing: 0.1rem;
+ }
+
+ .logo span {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #00adb5;
+ }
+
+ .nav-list{
+ position: absolute;
+ top: 25%;
+ left: 50%;
+ transform: translateX(-50%);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ opacity: 0;
+ visibility: hidden;
+ transition: all 0.2s;
+ }
+
+ .change .nav-list{
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.7s 0.5s;
+ }
+
+ .nav-link{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  color: #eee;
+  margin: 2rem 0;
+  transition: color 0.4s;
+ }
+
+ .nav-link:hover{
+  color:#00adb5;
+ }
+
+  /* The End of Navbar */
+
+   /* Menu */
+   .menu{
+      width: 4rem;
+      height: 4rem;
+      position: fixed;
+      top: 2rem;
+      right: 4rem;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      cursor: pointer;
+   }
+   .line{
+      width: 100%;
+      height: 0.2rem;
+      background-color: #eee;
+   }
+
+   .line-1{
+      width: 50%;
+   }
+
+   .line-3{
+      width:50%;
+      margin-left: auto;
+   }
+    /* The End of Menu */
+
+
 /* The First Section */
 .section-one {
   width: 100%;
@@ -123,8 +223,8 @@ html {
 }
 
 .front-btn {
-  width: 18rem;
-  height: 6rem;
+  width: 10rem;
+  height: 4rem;
   background: linear-gradient(to right, #00adb5, #1684a7);
   color: #fff;
   font-size: 2rem;
@@ -141,11 +241,11 @@ html {
   overflow: hidden;
 }
 
-.front-btn::before{
-  content:"";
+.front-btn::before {
+  content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, transparent, #EEEEEE, transparent);
+  background: linear-gradient(to right, transparent, #eeeeee, transparent);
   position: absolute;
   top: 0;
   left: -100%;
@@ -153,9 +253,12 @@ html {
   transition: left 0.5s;
 }
 
-.front-btn:hover::before{
+.front-btn:hover::before {
   left: 100%;
 }
+
+
+
 
 @keyframes popAnimation {
   0% {
