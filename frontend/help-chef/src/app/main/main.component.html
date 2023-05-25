@@ -6,10 +6,10 @@
       <nav class="navbar">
         <div class="logo"><span>H</span>elp<span>c</span>hef</div>
         <div class="nav-list">
-          <a href="#" class="nav-link"> Strona główna</a>
-          <a href="#" class="nav-link"> Konto</a>
-          <a href="#" class="nav-link"> Przepisy</a>
-          <a href="#" class="nav-link"> Zaloguj się</a>
+          <a routerLink="/main" class="nav-link"> Strona główna</a>
+          <a routerLink="/account" class="nav-link"> Konto</a>
+          <a routerLink="/add-recipe" class="nav-link"> Przepisy</a>
+          <a routerLink="/login" class="nav-link"> Zaloguj się</a>
         </div>
       </nav>
       <!-- The End of Navbar -->
@@ -36,7 +36,7 @@
           <span class="heading-five">Dinner</span>
         </h1>
         <p class="front-paragraph">“You are what you eat.”</p>
-        <button class="front-btn">Sign up</button>
+        <a routerLink="/sign-up"><button class="front-btn">Sign up</button></a>
       </div>
     </section>
 
