@@ -2,10 +2,30 @@
   <div class="container">
     <!-- The First Section -->
     <section class="section-one">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="logo"><span>H</span>elp<span>c</span>hef</div>
+        <div class="nav-list">
+          <a routerLink="/main" class="nav-link"> Strona główna</a>
+          <a routerLink="/account" class="nav-link"> Konto</a>
+          <a routerLink="/add-recipe" class="nav-link"> Przepisy</a>
+          <a routerLink="/login" class="nav-link"> Zaloguj się</a>
+        </div>
+      </nav>
+      <!-- The End of Navbar -->
+
+      <!-- Menu -->
+      <div class="menu">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </div>
+      <!-- The End of Menu -->
+
       <img
         class="front-image"
         src="assets/images/vector-cooking-set.png"
-        alt="Picture of cooking set"
+        alt="Picture ofa cooking set"
       />
       <div class="front">
         <h1 class="front-heading">
@@ -16,7 +36,7 @@
           <span class="heading-five">Dinner</span>
         </h1>
         <p class="front-paragraph">“You are what you eat.”</p>
-        <button class="front-btn">Sign up</button>
+        <a routerLink="/sign-up"><button class="front-btn">Sign up</button></a>
       </div>
     </section>
 
