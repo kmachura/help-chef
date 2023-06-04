@@ -1,4 +1,7 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
+import { RecipeService } from './recipe.service';
+import { Recipe } from './recipe';
+
 
 @Component({
   selector: 'app-add-recipe',
@@ -6,7 +9,10 @@ import { Component, ElementRef, OnInit } from '@angular/core';
   styleUrls: ['./add-recipe.component.css'],
 })
 export class AddRecipeComponent {
-  constructor(private elementRef: ElementRef) {}
+
+  recipes: Recipe[];
+
+  constructor(private elementRef: ElementRef, private recipeService: RecipeService) {}
 
   toggleNavbar(): void {
     const menu = this.elementRef.nativeElement.querySelector('.menu');
@@ -18,6 +24,10 @@ export class AddRecipeComponent {
   }
   ngOnInit(): void {
     this.toggleNavbar();
+    this.recipeService.getRecipes().subscribe((data: Recipe[]) => {
+      console.log(data);
+      this.recipes = data;
+    });
   }
     
 }
