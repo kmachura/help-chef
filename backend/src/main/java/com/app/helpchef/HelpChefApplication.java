@@ -47,7 +47,7 @@ public class HelpChefApplication implements CommandLineRunner {
         accountRepository.save(account);
 
         Ingredient ingredient = new Ingredient();
-        ingredient.setIngredientName("Tomato");
+        ingredient.setIngredientName("Pomidor");
         ingredient.setAmount(200);
         ingredient.setUnit("gram");
 
@@ -57,7 +57,7 @@ public class HelpChefApplication implements CommandLineRunner {
         ingredient2.setUnit("gram");
 
         Ingredient ingredient3 = new Ingredient();
-        ingredient3.setIngredientName("Basil");
+        ingredient3.setIngredientName("Bazylia");
         ingredient3.setAmount(50);
         ingredient3.setUnit("gram");
 
@@ -67,7 +67,7 @@ public class HelpChefApplication implements CommandLineRunner {
 
         Comment comment = new Comment();
         comment.setNick(user);
-        comment.setContent("The best salad ever!");
+        comment.setContent("Ta sałatka jest pyszna!");
         comment.setCommentDate(LocalDateTime.of(2023, 7, 10, 16, 10));
 
         commentRepository.save(comment);
@@ -82,7 +82,7 @@ public class HelpChefApplication implements CommandLineRunner {
 
         recipe.setIngredients(ingredienstList);
 
-        recipe.setDescription("1. Cut tomatos and mozarella 2. Put basil on top");
+        recipe.setDescription("1. Potnij pimidora i mozarelle na plasterki i ułóż je jedno po drugim 2. Połóż bazylię na górę");
         recipe.setRate(4.9);
         recipe.setComment(comment);
 

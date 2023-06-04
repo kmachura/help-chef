@@ -2,7 +2,7 @@
 <nav class="navbar">
   <div class="logo"><span>H</span>elp<span>c</span>hef</div>
   <div class="nav-list">
-    <a routerLink="/main" class="nav-link"> Strona główna</a>
+    <a routerLink="" class="nav-link"> Strona główna</a>
     <a routerLink="/account" class="nav-link"> Konto</a>
     <a routerLink="/add-recipe" class="nav-link"> Przepisy</a>
     <a routerLink="/login" class="nav-link"> Zaloguj się</a>
@@ -17,3 +17,24 @@
   <div class="line line-3"></div>
 </div>
 <!-- The End of Menu -->
+<div class="menuSpace"></div>
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <table *ngFor = "let recipe of recipes" class="table table-striped">
+        <thead>
+          <th>Nazwa przepisu</th>
+          <th>Ocena</th>
+          <th></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{recipe.recipeName}}</td>
+            <td>{{recipe.rate}}</td>
+            <td><a routerLink="/recipeDetails">Szczegóły</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

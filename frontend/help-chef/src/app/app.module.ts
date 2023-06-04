@@ -10,6 +10,7 @@ import { AccountComponent } from './account/account.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     AccountComponent,
     AddRecipeComponent,
     SignUpComponent,
+    RecipeDetailsComponent,
   ],
   imports: [BrowserModule, 
     AppRoutingModule,

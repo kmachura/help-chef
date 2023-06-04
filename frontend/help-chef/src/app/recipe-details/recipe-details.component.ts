@@ -1,14 +1,13 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { RecipeService } from '../recipe.service';
 import { Recipe } from '../recipe';
 
-
 @Component({
-  selector: 'app-add-recipe',
-  templateUrl: './add-recipe.component.html',
-  styleUrls: ['./add-recipe.component.css'],
+  selector: 'app-recipe-details',
+  templateUrl: './recipe-details.component.html',
+  styleUrls: ['./recipe-details.component.css']
 })
-export class AddRecipeComponent {
+export class RecipeDetailsComponent {
 
   recipes: Recipe[];
 
@@ -29,5 +28,5 @@ export class AddRecipeComponent {
       this.recipes = data;
     });
   }
-    
+
 }
