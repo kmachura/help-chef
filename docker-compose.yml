@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  backend:
+    image: help-chef
+    container_name: help-chef
+    build:
+      context: ./backend
+    ports:
+      - "9000:8080"
+  frontend:
+    image: help-chef-ui
+    container_name: help-chef-ui
+    build:
+      context: ./frontend/help-chef/
+    ports:
+      - "8082:4200"
+    depends_on:
+      - backend
