@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { RecipeService } from '../recipe.service';
 import { Recipe } from '../recipe';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,11 @@ export class AddRecipeComponent {
 
   recipes: Recipe[];
 
-  constructor(private elementRef: ElementRef, private recipeService: RecipeService) {}
+  constructor(private elementRef: ElementRef, private recipeService: RecipeService, private router:Router) {}
+
+  recipeDetails(recipeId: number){
+    this.router.navigate(['recipeDetails', recipeId])
+  }
 
   toggleNavbar(): void {
     const menu = this.elementRef.nativeElement.querySelector('.menu');
