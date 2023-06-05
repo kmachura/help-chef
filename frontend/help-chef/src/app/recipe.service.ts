@@ -8,9 +8,9 @@ import { Recipe } from './recipe';
 })
 
 export class RecipeService {
-    
-    private baseUrl = 'http://localhost:8080/api/recipes';
-    
+
+    private baseUrl = 'http://localhost:8082/api/recipes';
+
     constructor(private http: HttpClient) { }
 
     getRecipes(): Observable<Recipe[]>{
