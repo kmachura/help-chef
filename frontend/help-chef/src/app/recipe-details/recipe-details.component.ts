@@ -1,6 +1,7 @@
 import { Component, ElementRef } from '@angular/core';
 import { RecipeService } from '../recipe.service';
 import { Recipe } from '../recipe';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-details',
@@ -9,9 +10,10 @@ import { Recipe } from '../recipe';
 })
 export class RecipeDetailsComponent {
 
-  recipes: Recipe[];
+  recipeById: Recipe;
+  recipeId: number;
 
-  constructor(private elementRef: ElementRef, private recipeService: RecipeService) {}
+  constructor(private elementRef: ElementRef, private route: ActivatedRoute, private recipeService: RecipeService) {}
 
   toggleNavbar(): void {
     const menu = this.elementRef.nativeElement.querySelector('.menu');
@@ -23,10 +25,12 @@ export class RecipeDetailsComponent {
   }
   ngOnInit(): void {
     this.toggleNavbar();
-    this.recipeService.getRecipes().subscribe((data: Recipe[]) => {
-      console.log(data);
-      this.recipes = data;
-    });
+    
+    this.recipeId = this.route.snapshot.params['recipeId'];
+    this.recipeById = new Recipe();
+    this.recipeService.getRecipeById(this.recipeId).subscribe(data => {
+      this.recipeById = data;
+    })
   }
 
 }

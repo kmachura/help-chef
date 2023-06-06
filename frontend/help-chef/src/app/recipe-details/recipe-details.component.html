@@ -18,10 +18,10 @@
   </div>
   <!-- The End of Menu -->
   <div class="menuSpace"></div>
-<div *ngFor = "let recipe of recipes" class="container">
+<div class="container">
   <div class="card">
     <div class="card-body">
-        <h1>Szczegóły przepisu: {{recipe.recipeName}} (Ocena: {{recipe.rate}}/5)</h1>
+        <h1>Szczegóły przepisu: {{recipeById.recipeName}} (Ocena: {{recipeById.rate}}/5)</h1>
             <table class="table table-striped">
                 <thead>
                     <th>Składniki</th>
@@ -29,7 +29,7 @@
                     <th>Jednostka</th>
                 </thead>
                 <tbody>
-                <tr *ngFor = "let ingredient of recipe.ingredients">
+                <tr *ngFor = "let ingredient of recipeById.ingredients">
                     <td>{{ingredient.ingredientName}}</td>
                     <td>{{ingredient.amount}}</td>
                     <td>{{ingredient.unit}}</td>
@@ -37,7 +37,7 @@
                 </tbody>
             </table>
         <h1>Opis</h1>
-        <p>{{recipe.description}}</p>
+        <p>{{recipeById.description}}</p>
         <h1>Komentarze</h1>
         <table class="table table-striped">
             <thead>
@@ -47,9 +47,9 @@
             </thead>
             <tbody>
             <tr>
-                <td>{{recipe.comment.nick.nick}}</td>
-                <td>{{recipe.comment.content}}</td>
-                <td>{{recipe.comment.commentDate}}</td>
+                <td>{{recipeById.comment.nick.nick}}</td>
+                <td>{{recipeById.comment.content}}</td>
+                <td>{{recipeById.comment.commentDate}}</td>
             </tr>
             </tbody>
         </table>

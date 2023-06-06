@@ -46,6 +46,7 @@ public class HelpChefApplication implements CommandLineRunner {
 
         accountRepository.save(account);
 
+        //1st recipe
         Ingredient ingredient = new Ingredient();
         ingredient.setIngredientName("Pomidor");
         ingredient.setAmount(200);
@@ -87,6 +88,56 @@ public class HelpChefApplication implements CommandLineRunner {
         recipe.setComment(comment);
 
         recipeRepository.save(recipe);
+
+        //2nd recipe
+        Ingredient ingredient4 = new Ingredient();
+        ingredient4.setIngredientName("Burak");
+        ingredient4.setAmount(500);
+        ingredient4.setUnit("gram");
+
+        Ingredient ingredient5 = new Ingredient();
+        ingredient5.setIngredientName("Feta");
+        ingredient5.setAmount(250);
+        ingredient5.setUnit("gram");
+
+        Ingredient ingredient6 = new Ingredient();
+        ingredient6.setIngredientName("Rukola");
+        ingredient6.setAmount(300);
+        ingredient6.setUnit("gram");
+
+        ingredientRepository.save(ingredient4);
+        ingredientRepository.save(ingredient5);
+        ingredientRepository.save(ingredient6);
+
+        Comment comment2 = new Comment();
+        comment2.setNick(user);
+        comment2.setContent("Najlepsza sałatka z buraków!");
+        comment2.setCommentDate(LocalDateTime.of(2023, 7, 10, 16, 10));
+
+        Comment comment3 = new Comment();
+        comment3.setNick(user);
+        comment3.setContent("Bardzo pyszne :)");
+        comment3.setCommentDate(LocalDateTime.of(2023, 8, 11, 18, 15));
+
+        commentRepository.save(comment2);
+        commentRepository.save(comment3);
+
+        Recipe recipe2 = new Recipe();
+        recipe2.setRecipeName("Carpaccio z buraka");
+
+        List<Ingredient> ingredienstList2 = new ArrayList<>();
+        ingredienstList2.add(ingredient4);
+        ingredienstList2.add(ingredient5);
+        ingredienstList2.add(ingredient6);
+
+        recipe2.setIngredients(ingredienstList2);
+
+        recipe2.setDescription("1. Pokroić buraka i fete w kostkę 2. Dodać rukolę 3. Wszystko ze sobą wymieszać");
+        recipe2.setRate(5);
+        recipe2.setComment(comment2);
+        //do to comments list
+
+        recipeRepository.save(recipe2);
 
     }
 }
